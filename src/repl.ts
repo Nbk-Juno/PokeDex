@@ -20,7 +20,7 @@ export function startREPL(state: State): void {
 
     if (command) {
       try {
-        command.callback(state);
+        await command.callback(state);
       } catch (error) {
         console.log(error);
       }
